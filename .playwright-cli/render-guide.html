@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Guide Vidéo D17 & Flouci - DigiPaiement.tn</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    background: #060a12;
+    color: #f8fafc;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    position: relative;
+  }
+  .bg-glow-1 {
+    position: absolute;
+    width: 560px;
+    height: 560px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 70%);
+    top: -120px;
+    left: -80px;
+  }
+  .bg-glow-2 {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.2), transparent 70%);
+    bottom: -140px;
+    right: -60px;
+  }
+  .frame {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 44px 56px 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+  }
+  .brand-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+  }
+  .brand span { color: #38bdf8; }
+  .pill {
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    color: #bae6fd;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .stage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    margin: 18px 0;
+  }
+  .left-col {
+    flex: 1.15;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .step-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .tag-blue { background: rgba(37, 99, 235, 0.2); border: 1px solid rgba(59, 130, 246, 0.5); color: #93c5fd; }
+  .tag-amber { background: rgba(245, 158, 11, 0.18); border: 1px solid rgba(251, 191, 36, 0.55); color: #fde68a; }
+  .tag-cyan { background: rgba(6, 182, 212, 0.18); border: 1px solid rgba(34, 211, 238, 0.55); color: #a5f3fc; }
+  .tag-emerald { background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(52, 211, 153, 0.55); color: #a7f3d0; }
+
+  h1 {
+    font-size: 46px;
+    line-height: 1.12;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+  }
+  .accent { color: #38bdf8; }
+  .accent-amber { color: #fbbf24; }
+  .accent-emerald { color: #34d399; }
+
+  .desc {
+    font-size: 21px;
+    line-height: 1.48;
+    color: #cbd5e1;
+    max-width: 600px;
+  }
+  .checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 4px;
+  }
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    padding: 13px 18px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #f1f5f9;
+  }
+  .check-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #10b981;
+    color: #022c22;
+    font-weight: 900;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .phone-wrap {
+    flex: 0.85;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .phone {
+    width: 340px;
+    height: 495px;
+    border-radius: 36px;
+    background: #0f172a;
+    border: 4px solid #334155;
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255,255,255,0.06);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .phone-notch {
+    width: 110px;
+    height: 14px;
+    border-radius: 999px;
+    background: #1e293b;
+    margin: 0 auto 10px;
+  }
+  .app-header {
+    padding: 14px 16px;
+    border-radius: 16px;
+    font-weight: 800;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .app-d17 { background: linear-gradient(135deg, #d97706, #f59e0b); color: #0f172a; }
+  .app-flouci { background: linear-gradient(135deg, #0284c7, #06b6d4); color: #ffffff; }
+  .app-digi { background: linear-gradient(135deg, #1d4ed8, #2563eb); color: #ffffff; }
+  .app-wa { background: linear-gradient(135deg, #059669, #10b981); color: #ffffff; }
+
+  .card-box {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 15px 16px;
+  }
+  .field-label { font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+  .field-val { font-size: 21px; font-weight: 800; color: #ffffff; font-family: ui-monospace, SFMono-Regular, monospace; }
+  .field-sub { font-size: 13px; color: #cbd5e1; margin-top: 3px; }
+  .cta-sim {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #2563eb, #06b6d4);
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.35);
+  }
+  .cta-green {
+    background: linear-gradient(90deg, #059669, #10b981);
+    color: #022c22;
+    box-shadow: 0 10px 24px rgba(16, 185, 129, 0.35);
+  }
+  .timeline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.95);
+    border-top: 1px solid #1e293b;
+    padding: 12px 56px 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 5;
+  }
+  .t-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .t-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #64748b;
+  }
+  .t-step.active .t-label {
+    color: #f8fafc;
+  }
+  .t-bar-bg {
+    height: 6px;
+    border-radius: 999px;
+    background: #1e293b;
+    overflow: hidden;
+  }
+  .t-bar-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+  }
+  .scene { display: none; }
+  .scene.active { display: flex; }
+</style>
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <div class="frame">
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-badge">D</div>
+        <div>DigiPaiement<span>.tn</span></div>
+      </div>
+      <div class="pill" id="top-pill">Guide Officiel • Paiement en Dinars Tunisiens (TND)</div>
+    </div>
+
+    <!-- SCENE 1: 0-4s -->
+    <div class="stage scene active" id="scene-1">
+      <div class="left-col">
+        <div class="step-tag tag-blue">Étape 01 • Commande en TND</div>
+        <h1>Choisissez votre service <span class="accent">sans carte bancaire</span></h1>
+        <p class="desc">Sélectionnez Google One (Flow &amp; Veo), Office 365 ou votre plateforme Streaming, puis cliquez sur Commander.</p>
+        <div class="checklist">
+          <div class="check-item"><div class="check-dot">1</div><span>Google One (Gemini Plus, Flow &amp; Veo) — 29 TND / mois</span></div>
+          <div class="check-item"><div class="check-dot">2</div><span>Microsoft Office 365 — 19 TND / mois • Streaming dès 15 TND</span></div>
+        </div>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div>
+            <div class="phone-notch"></div>
+            <div class="app-header app-digi"><span>DigiPaiement.tn</span><span>TND</span></div>
+          </div>
+          <div class="card-box">
+            <div class="field-label">Abonnement sélectionné</div>
+            <div class="field-val" style="font-family:inherit;font-size:20px;">Google One (Flow &amp; Veo)</div>
+            <div class="field-sub">Durée : 1 mois • Email personnel</div>
+          </div>
+          <div class="card-box">
+            <div class="field-label">Total à régler</div>
+            <div class="field-val" style="color:#38bdf8;">29 TND</div>
+            <div class="field-sub">Zéro frais cachés • Livraison 15-30 min</div>
+          </div>
+          <div class="cta-sim">Confirmer ma commande →</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 2: 4-8s -->
+    <div class="stage scene" id="scene-2">
+      <div class="left-col">
+        <div class="step-tag tag-amber">Étape 02A • Payer avec D17</div>
+        <h1>Transfert rapide via <span class="accent-amber">D17 Poste Tunisienne</span></h1>
+        <p class="desc">Ouvrez votre application D17 sur mobile, envoyez le montant exact en TND et prenez une capture du reçu.</p>
+        <div class="checklist">
+          <div class="check-item"><div class="check-dot">✓</div><span>Ouvrez D17 → Menu « Transfert d'argent »</span></div>
+          <div class="check-item"><div class="check-dot">✓</div><span>Saisissez le numéro vérifié : <strong style="color:#fbbf24;">98 765 432</strong></span></div>
+          <div class="check-item"><div class="check-dot">✓</div><span>Validez le transfert et enregistrez le reçu</span></div>
+        </div>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div>
+            <div class="phone-notch"></div>
+            <div class="app-header app-d17"><span>D17 • Poste TN</span><span>Transfert</span></div>
+          </div>
+          <div class="card-box">
+            <div class="field-label">Bénéficiaire DigiPaiement</div>
+            <div class="field-val" style="color:#fbbf24;">98 765 432</div>
+            <div class="field-sub">Compte vérifié DigiPaiement TN</div>
+          </div>
+          <div class="card-box">
+            <div class="field-label">Montant du transfert</div>
+            <div class="field-val">29.000 TND</div>
+            <div class="field-sub">Référence : Commande #DG-4821</div>
+          </div>
+          <div class="cta-sim cta-green">✓ Transfert D17 effectué</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 3: 8-12s -->
+    <div class="stage scene" id="scene-3">
+      <div class="left-col">
+        <div class="step-tag tag-cyan">Étape 02B • Payer avec Flouci</div>
+        <h1>Paiement instantané sur <span class="accent">Flouci</span></h1>
+        <p class="desc">Vous utilisez Flouci ? Envoyez directement vers notre tag officiel en quelques secondes, 24h/24 et 7j/7.</p>
+        <div class="checklist">
+          <div class="check-item"><div class="check-dot">✓</div><span>Ouvrez Flouci → « Envoyer de l'argent »</span></div>
+          <div class="check-item"><div class="check-dot">✓</div><span>Recherchez le tag : <strong style="color:#38bdf8;">@digipaiement</strong> (98 765 432)</span></div>
+          <div class="check-item"><div class="check-dot">✓</div><span>Confirmez en TND et faites une capture d'écran</span></div>
+        </div>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div>
+            <div class="phone-notch"></div>
+            <div class="app-header app-flouci"><span>Flouci Wallet</span><span>Instantané</span></div>
+          </div>
+          <div class="card-box">
+            <div class="field-label">Tag Flouci officiel</div>
+            <div class="field-val" style="color:#38bdf8;">@digipaiement</div>
+            <div class="field-sub">Ou numéro mobile : 98 765 432</div>
+          </div>
+          <div class="card-box">
+            <div class="field-label">Montant envoyé</div>
+            <div class="field-val">29.000 TND</div>
+            <div class="field-sub">Transaction sécurisée sans frais</div>
+          </div>
+          <div class="cta-sim cta-green">✓ Paiement Flouci validé</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 4: 12-16s -->
+    <div class="stage scene" id="scene-4">
+      <div class="left-col">
+        <div class="step-tag tag-emerald">Étape 03 • Activation Express</div>
+        <h1>Envoyez le reçu et <span class="accent-emerald">profitez en 15-30 min</span></h1>
+        <p class="desc">Transmettez la capture D17 ou Flouci sur WhatsApp. Notre équipe à Tunis active votre compte officiel immédiatement.</p>
+        <div class="checklist">
+          <div class="check-item"><div class="check-dot">✓</div><span>Partagez la capture + votre numéro de commande (#DG-XXXX)</span></div>
+          <div class="check-item"><div class="check-dot">✓</div><span>Réception de l'invitation sur votre email sous 15 à 30 min</span></div>
+          <div class="check-item"><div class="check-dot">✓</div><span>Garantie 100% sur toute la durée de l'abonnement</span></div>
+        </div>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div>
+            <div class="phone-notch"></div>
+            <div class="app-header app-wa"><span>WhatsApp Support</span><span>En ligne</span></div>
+          </div>
+          <div class="card-box">
+            <div class="field-label">Message pré-rempli envoyé</div>
+            <div class="field-sub" style="color:#e2e8f0;font-size:15px;">« Bonjour DigiPaiement ! Voici mon reçu D17/Flouci pour #DG-4821. »</div>
+          </div>
+          <div class="card-box" style="border-color:#10b981;background:rgba(16,185,129,0.12);">
+            <div class="field-label" style="color:#6ee7b7;">Statut de la commande</div>
+            <div class="field-val" style="color:#34d399;font-family:inherit;font-size:20px;">Abonnement Activé ✓</div>
+            <div class="field-sub">Invitation envoyée sur votre email !</div>
+          </div>
+          <div class="cta-sim cta-green">Prêt à utiliser dès maintenant !</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="t-step active" id="t-1">
+      <div class="t-label">01. Commande TND</div>
+      <div class="t-bar-bg"><div class="t-bar-fill" id="b-1"></div></div>
+    </div>
+    <div class="t-step" id="t-2">
+      <div class="t-label">02. Payer par D17</div>
+      <div class="t-bar-bg"><div class="t-bar-fill" id="b-2"></div></div>
+    </div>
+    <div class="t-step" id="t-3">
+      <div class="t-label">03. Payer par Flouci</div>
+      <div class="t-bar-bg"><div class="t-bar-fill" id="b-3"></div></div>
+    </div>
+    <div class="t-step" id="t-4">
+      <div class="t-label">04. Activation 15-30 min</div>
+      <div class="t-bar-bg"><div class="t-bar-fill" id="b-4"></div></div>
+    </div>
+  </div>
+
+  <script>
+    window.setTime = function(sec) {
+      var idx = Math.min(4, Math.max(1, Math.floor(sec / 4) + 1));
+      for (var i = 1; i <= 4; i++) {
+        document.getElementById('scene-' + i).className = i === idx ? 'stage scene active' : 'stage scene';
+        document.getElementById('t-' + i).className = i <= idx ? 't-step active' : 't-step';
+        var fill = 0;
+        if (i < idx) fill = 100;
+        else if (i === idx) fill = Math.min(100, Math.max(0, ((sec - (i - 1) * 4) / 4) * 100));
+        document.getElementById('b-' + i).style.width = fill + '%';
+      }
+    };
+    window.setTime(0);
+  </script>
+</body>
+</html>

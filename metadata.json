@@ -1,0 +1,6 @@
+{
+  "name": "DigiPaiement.tn - Abonnements Numériques & IA en Dinars Tunisiens",
+  "description": "Activez vos abonnements premium (Google One avec Gemini Plus & Google Flow, Microsoft Office 365, Shahid VIP, Spotify, Prime TV, Apple TV+) en Dinars Tunisiens (TND) via D17 et Flouci.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
