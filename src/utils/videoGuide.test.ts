@@ -28,7 +28,7 @@ test('getChapterForTime maps timestamps to the right chapter', () => {
 
 test('getDefaultPaymentGuideScript returns verified coordinates for D17 and Flouci', () => {
   const d17 = getDefaultPaymentGuideScript('D17');
-  assert.match(d17.recipientInfo, /98 765 432/);
+  assert.match(d17.recipientInfo, /58 570 825/);
   assert.equal(d17.steps.length, 4);
 
   const flouci = getDefaultPaymentGuideScript('Flouci');

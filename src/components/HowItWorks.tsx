@@ -243,6 +243,15 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenOrderModal }) => {
                 <span className="text-cyan-300 font-bold">Flouci : </span>
                 <span className="font-mono font-bold text-white">{PAYMENT_RECIPIENTS.flouciTag}</span>
               </div>
+              <a
+                href="https://wa.me/21658570825"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3.5 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs hover:bg-emerald-500/20 transition-colors"
+              >
+                <span className="text-emerald-300 font-bold">WhatsApp : </span>
+                <span className="font-mono font-bold text-white">+216 58 570 825</span>
+              </a>
             </div>
           </div>
 

@@ -22,9 +22,9 @@ export interface PaymentGuideScript {
 }
 
 export const PAYMENT_RECIPIENTS = {
-  d17Number: '98 765 432',
+  d17Number: '58 570 825',
   flouciTag: '@digipaiement',
-  flouciNumber: '98 765 432',
+  flouciNumber: '58 570 825',
   activationDelay: '15 à 30 minutes',
 } as const;
 
@@ -49,8 +49,8 @@ export const VIDEO_GUIDE_CHAPTERS: VideoChapter[] = [
     timeRange: '0:04 – 0:08',
     methodTag: 'D17 Poste Tunisienne',
     description:
-      'Ouvrez D17 → Transfert d’argent, saisissez le numéro vérifié 98 765 432, entrez le montant exact en TND et capturez le reçu.',
-    recipientHighlight: 'Numéro D17 : 98 765 432',
+      'Ouvrez D17 → Transfert d’argent, saisissez le numéro vérifié 58 570 825, entrez le montant exact en TND et capturez le reçu.',
+    recipientHighlight: 'Numéro D17 : 58 570 825',
   },
   {
     id: 'flouci',
@@ -61,7 +61,7 @@ export const VIDEO_GUIDE_CHAPTERS: VideoChapter[] = [
     timeRange: '0:08 – 0:12',
     methodTag: 'Flouci Wallet',
     description:
-      'Ouvrez Flouci → Envoyer de l’argent, recherchez le tag @digipaiement (ou 98 765 432), confirmez en TND et gardez la capture.',
+      'Ouvrez Flouci → Envoyer de l’argent, recherchez le tag @digipaiement (ou 58 570 825), confirmez en TND et gardez la capture.',
     recipientHighlight: 'Tag Flouci : @digipaiement',
   },
   {
@@ -93,7 +93,7 @@ export function getDefaultPaymentGuideScript(method: GuidePaymentMethod): Paymen
       method: 'D17',
       title: 'Guide pas à pas : Régler votre commande via D17',
       voiceover:
-        'Pour payer avec D17 Poste Tunisienne, ouvrez votre application mobile, sélectionnez Transfert d’argent, indiquez le numéro 98 765 432 avec le montant exact de votre commande en Dinars, puis envoyez la capture du reçu sur WhatsApp pour activer votre accès en 15 à 30 minutes.',
+        'Pour payer avec D17 Poste Tunisienne, ouvrez votre application mobile, sélectionnez Transfert d’argent, indiquez le numéro 58 570 825 avec le montant exact de votre commande en Dinars, puis envoyez la capture du reçu sur WhatsApp pour activer votre accès en 15 à 30 minutes.',
       steps: [
         'Passez votre commande sur DigiPaiement.tn et notez votre référence (#DG-XXXX) ainsi que le montant exact en TND.',
         'Ouvrez l’application D17 (Poste Tunisienne) et choisissez « Transfert d’argent ».',
@@ -110,7 +110,7 @@ export function getDefaultPaymentGuideScript(method: GuidePaymentMethod): Paymen
       method: 'Flouci',
       title: 'Guide pas à pas : Régler votre commande via Flouci',
       voiceover:
-        'Avec Flouci, le règlement est instantané 24h/24 : ouvrez Flouci, appuyez sur Envoyer de l’argent, recherchez le tag @digipaiement ou le numéro 98 765 432, confirmez le montant en TND et partagez votre reçu sur WhatsApp.',
+        'Avec Flouci, le règlement est instantané 24h/24 : ouvrez Flouci, appuyez sur Envoyer de l’argent, recherchez le tag @digipaiement ou le numéro 58 570 825, confirmez le montant en TND et partagez votre reçu sur WhatsApp.',
       steps: [
         'Sélectionnez votre abonnement (1 mois ou 3 mois) et validez votre commande sur DigiPaiement.tn.',
         'Ouvrez votre application Flouci et sélectionnez « Envoyer de l’argent ».',
@@ -126,7 +126,7 @@ export function getDefaultPaymentGuideScript(method: GuidePaymentMethod): Paymen
     method: 'Les deux',
     title: 'Résumé Express : Paiement D17 & Flouci en Tunisie',
     voiceover:
-      'Réglez tous vos abonnements en Dinars Tunisiens sans carte bancaire internationale : envoyez votre paiement par D17 au 98 765 432 ou par Flouci vers @digipaiement, puis partagez la capture sur WhatsApp pour une activation sous 15 à 30 minutes.',
+      'Réglez tous vos abonnements en Dinars Tunisiens sans carte bancaire internationale : envoyez votre paiement par D17 au 58 570 825 ou par Flouci vers @digipaiement, puis partagez la capture sur WhatsApp pour une activation sous 15 à 30 minutes.',
     steps: [
       'Choisissez votre outil ou pack sur DigiPaiement.tn (tarif clair en TND, 1 mois ou 3 mois).',
       `Via D17 : effectuez un transfert vers le ${PAYMENT_RECIPIENTS.d17Number}.`,

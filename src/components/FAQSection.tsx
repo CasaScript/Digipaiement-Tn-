@@ -250,7 +250,7 @@ export const FAQSection: React.FC = () => {
 
           <div className="shrink-0 flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
             <a
-              href="https://wa.me/21698765432?text=Bonjour%20DigiPaiement.tn%20!%20J'ai%20une%20question%20concernant%20mon%20abonnement"
+              href="https://wa.me/21658570825?text=Bonjour%20DigiPaiement.tn%20!%20J'ai%20une%20question%20concernant%20mon%20abonnement"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-950 bg-emerald-400 hover:bg-emerald-300 shadow-xl shadow-emerald-400/20 transition-all hover:scale-[1.02]"

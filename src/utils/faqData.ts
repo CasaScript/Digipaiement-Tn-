@@ -90,7 +90,7 @@ export const FAQ_LIST: FAQItem[] = [
     categoryLabel: 'Outils',
     question: "Puis-je commander un outil qui ne figure pas encore dans le catalogue ?",
     answer:
-      "Oui ! Nous répondons aux demandes personnalisées pour d'autres outils numériques professionnels sur demande. Il vous suffit de nous contacter directement sur WhatsApp au +216 98 765 432 avec le nom du service souhaité pour obtenir un devis immédiat en TND.",
+      "Oui ! Nous répondons aux demandes personnalisées pour d'autres outils numériques professionnels sur demande. Il vous suffit de nous contacter directement sur WhatsApp au +216 58 570 825 avec le nom du service souhaité pour obtenir un devis immédiat en TND.",
     highlights: ["Outils sur mesure disponibles", "Devis instantané en Dinars", "Support WhatsApp dédié"],
   },
   {
@@ -119,7 +119,7 @@ export const FAQ_LIST: FAQItem[] = [
     categoryLabel: 'Paiement',
     question: "Comment payer avec l'application D17 de la Poste Tunisienne ?",
     answer:
-      "Dans l'application D17 de votre smartphone, sélectionnez « Transfert d'argent », saisissez le numéro de téléphone officiel communiqué lors de votre commande (+216 98 765 432), entrez le montant exact en Dinars et validez avec votre code secret. Vous recevez un reçu de transaction avec référence : prenez une capture d'écran et envoyez-la nous sur WhatsApp.",
+      "Dans l'application D17 de votre smartphone, sélectionnez « Transfert d'argent », saisissez le numéro de téléphone officiel communiqué lors de votre commande (+216 58 570 825), entrez le montant exact en Dinars et validez avec votre code secret. Vous recevez un reçu de transaction avec référence : prenez une capture d'écran et envoyez-la nous sur WhatsApp.",
     highlights: ["Transfert instantané D17", "Accessible depuis n'importe quel compte e-dinar", "Validation en quelques minutes"],
   },
   {
@@ -206,8 +206,8 @@ export const FAQ_LIST: FAQItem[] = [
     categoryLabel: 'Support Client',
     question: "Quelles sont les coordonnées officielles du service client ?",
     answer:
-      "Notre équipe est joignable via plusieurs canaux directs : \n• WhatsApp Express : +216 98 765 432 (canal recommandé pour activation rapide et envoi de reçu)\n• E-mail officiel : contact@digipaiement.tn\n• Téléphone hotline : +216 98 765 432\n• Adresse : Tunis, Tunisie (Service 100% en ligne couvrant les 24 gouvernorats)",
-    highlights: ["WhatsApp : +216 98 765 432", "Email : contact@digipaiement.tn", "Couverture nationale 24 gouvernorats"],
+      "Notre équipe est joignable via plusieurs canaux directs : \n• WhatsApp Express : +216 58 570 825 (canal recommandé pour activation rapide et envoi de reçu)\n• E-mail officiel : contact@digipaiement.tn\n• Téléphone hotline : +216 58 570 825\n• Adresse : Tunis, Tunisie (Service 100% en ligne couvrant les 24 gouvernorats)",
+    highlights: ["WhatsApp : +216 58 570 825", "Email : contact@digipaiement.tn", "Couverture nationale 24 gouvernorats"],
   },
   {
     id: 'sup-2',

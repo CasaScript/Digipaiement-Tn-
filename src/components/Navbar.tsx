@@ -228,13 +228,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span>Simulateur & Conseiller IA</span>
               </button>
               <a
-                href="https://wa.me/21698765432"
+                href="https://wa.me/21658570825"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-emerald-950/40 text-emerald-300 border border-emerald-700/30"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>Discuter sur WhatsApp (+216 98 765 432)</span>
+                <span>Discuter sur WhatsApp (+216 58 570 825)</span>
               </a>
             </div>
           </div>

@@ -75,7 +75,7 @@ test('generateWhatsAppLink returns properly formatted URL', () => {
     customerEmail: 'test@example.com',
     orderId: 'DG-1234',
   });
-  assert.ok(link.startsWith('https://wa.me/21698765432?text='));
+  assert.ok(link.startsWith('https://wa.me/21658570825?text='));
   assert.ok(link.includes(encodeURIComponent('Google One')));
   assert.ok(link.includes(encodeURIComponent('DG-1234')));
 });

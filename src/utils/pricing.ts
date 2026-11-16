@@ -210,7 +210,7 @@ export function generateWhatsAppLink(params: {
   paymentMethod: string;
   customerEmail: string;
 }): string {
-  const targetPhone = '21698765432';
+  const targetPhone = '21658570825';
   const text = `Bonjour DigiPaiement.tn ! 🇹🇳\nJe souhaite commander l'abonnement : *${params.toolName}* (${params.duration}).\nMode de paiement : *${params.paymentMethod}*\nMon adresse e-mail d'activation : ${params.customerEmail}${
     params.orderId ? `\nRéférence : #${params.orderId}` : ''
   }\nMerci de me confirmer les coordonnées de transfert !`;

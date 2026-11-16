@@ -477,7 +477,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose, default
                   <span>Envoyer mon reçu sur WhatsApp (Validation Rapide)</span>
                 </a>
                 <p className="text-center text-[10px] text-slate-400">
-                  Vous pouvez aussi envoyer une capture de votre reçu directement au +216 98 765 432
+                  Vous pouvez aussi envoyer une capture de votre reçu directement au +216 58 570 825
                 </p>
               </div>
 

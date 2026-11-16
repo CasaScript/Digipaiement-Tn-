@@ -129,7 +129,7 @@ export const ContactSection: React.FC = () => {
 
               {/* WhatsApp Card */}
               <a
-                href="https://wa.me/21698765432?text=Bonjour%20DigiPaiement.tn%20!%20J'ai%20une%20question%20concernant%20les%20abonnements"
+                href="https://wa.me/21658570825?text=Bonjour%20DigiPaiement.tn%20!%20J'ai%20une%20question%20concernant%20les%20abonnements"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/30 hover:border-emerald-500/60 transition-all flex items-center justify-between group"
@@ -142,7 +142,7 @@ export const ContactSection: React.FC = () => {
                     <h4 className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
                       WhatsApp Express (Recommandé)
                     </h4>
-                    <p className="text-xs text-slate-300">+216 98 765 432</p>
+                    <p className="text-xs text-slate-300">+216 58 570 825</p>
                     <p className="text-[11px] text-emerald-400 mt-0.5 font-medium">Réponse en moins de 15 min</p>
                   </div>
                 </div>

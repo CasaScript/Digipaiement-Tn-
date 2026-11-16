@@ -40,6 +40,6 @@ test('filterFAQs filters by search query correctly', () => {
 test('FAQ customer support includes official phone and email', () => {
   const supportItems = FAQ_LIST.filter((item) => item.category === 'customer-support');
   const supportText = supportItems.map((i) => i.answer).join(' ');
-  assert.ok(supportText.includes('+216 98 765 432'), 'Should contain phone number');
+  assert.ok(supportText.includes('+216 58 570 825'), 'Should contain phone number');
   assert.ok(supportText.includes('contact@digipaiement.tn'), 'Should contain email');
 });

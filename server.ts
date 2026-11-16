@@ -212,13 +212,13 @@ app.post('/api/orders', requireAuth, async (req: AuthRequest, res) => {
 
     const paymentDetails = {
       d17: {
-        number: '98 765 432',
+        number: '58 570 825',
         accountName: 'DigiPaiement TN / Service Activation',
         instructions: 'Effectuez le transfert via l’application D17 Poste Tunisienne puis envoyez la capture du reçu.',
       },
       flouci: {
         tag: '@digipaiement',
-        phone: '98 765 432',
+        phone: '58 570 825',
         instructions: 'Ouvrez Flouci, effectuez le transfert vers le tag @digipaiement et partagez la capture sur WhatsApp.',
       },
       virement: {
@@ -236,7 +236,7 @@ app.post('/api/orders', requireAuth, async (req: AuthRequest, res) => {
       success: true,
       order: newOrder,
       paymentDetails,
-      whatsappUrl: `https://wa.me/21698765432?text=${whatsappMessage}`,
+      whatsappUrl: `https://wa.me/21658570825?text=${whatsappMessage}`,
     });
   } catch (error: any) {
     console.error('Failed to create order:', error);
